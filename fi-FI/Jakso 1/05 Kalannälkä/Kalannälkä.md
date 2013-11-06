@@ -9,9 +9,9 @@ Tehdään Kalannälkä-peli! Ohjaa isoa Nälkäistä Kalaa ja yritä syödä kai
 __Pistetään Nälkäinen Kala uimaan meressä!__
 
 1. Aloita uusi projekti.
-2. Valitse esiintymislava, valitse lavan 'Tausta'-välilehti. Tuo kirjastosta Luonto/underwater2 ja poista backdrop1.
+2. Valitse esiintymislava, valitse lavan 'Tausta'-välilehti. Tuo kirjastosta Luonto/underwater3 ja poista backdrop1.
 3. Muuta Sprite1:n nimi Nälkäiseksi Kalaksi.
-4. Tuo Nälkäisen Kalan asuste, Resurssit/NälkäinenKala.png ja poista olemassa olevat asusteet costume1 ja costume2. Poista kissa hahmo oikeanapsauttamalla sitä ja valitsemalla poista.
+4. Tuo Nälkäisen Kalan asuste, Resurssit/NälkäinenKala.png ja poista olemassa olevat asusteet costume1 ja costume2. 
 5. Varmista, että hahmo suuntaa vain vasemmalle ja oikealle napsauttamalla hahmon tiedoissa: (kuva jossa vasen/oikea-nuolet)
 6. Nyt luo skripti jolla Nälkäinen Kala seuraa hiiriosoitinta meressä näin:
 
@@ -28,16 +28,16 @@ __Napsauta vihreätä lippua.__
 Liikuta hiiriosoitinta ympäri merta. Seuraako kala osoitinta?
 Mitä tapahtuu jos et liikuta osoitinta ja kala pääsee siihen kiinni? Miltä se näyttää? Miksi näin tapahtuu?
 
-7. Saat Nälkäisen Kalan hullunkurisen vipattelun loppumaan jos käsket sen liikkumaan vain silloin, kun se ei ole liian lähellä hiiriosoitinta. 
-('etäisyys kohteeseen' -lohko on 'Tuntuaisti'-paletissa).
+7. Saat Nälkäisen Kalan hullunkurisen vipattelun loppumaan jos käsket sen liikkumaan vain silloin, kun se on riittävän kaukana hiiriosoittimesta. 
+('etäisyys kohteeseen' -lohko on 'Tuntoaisti'-paletissa).
 
 
 ```scratch
 	kun klikataan LIPPU
 	ikuisesti
 		jos etäisyys kohteeseen hiiriosoitin > 10, sitten
-		osoita kohti hiiriosoitin
-		liiku 3 askelta
+			osoita kohti hiiriosoitin
+			liiku 3 askelta
 		(loppu jos)
 	(loppu ikuisesti)
 ```
@@ -56,7 +56,7 @@ Jos haluat, voit käyttää skriptissä eri numeroita. Miten tämä vaikuttaa N�
 
 1. Luo uusi hahmo kirjastosta Eläimet/Fish2. 
 2. Käytä 'Pienennä' -työkalua (lavan yläpuolella) tehdäksesi hahmosta pienemmän.
-3. Luo skripti jolla saali ui ympäriinsä. Haluamme niiden liikkuvan satunnaisesti, joten pistetään ne liikkumaan eteenpäin vähän matkaa, kääntymään satunnaisen määrän vasemmalle tai oikealle ja sitten tekemään saman uudelleen.
+3. Luo skripti jolla saalis ui ympäriinsä. Haluamme sen liikkuvan satunnaisesti, joten pistetään se liikkumaan eteenpäin vähän matkaa, kääntymään satunnaisen määrän vasemmalle tai oikealle ja sitten tekemään saman uudelleen.
 
 ```scratch
 	kun klikataan LIPPU
@@ -183,47 +183,45 @@ Syökö Nälkäinen Kala saaliit? Syökö se yksittäisiä saaliita?
 Tallenna projektisi
 
 ###Ajateltavaa
-Miksi meidän pitää lisätä 'näytä'-lohko saaliin skriptin alkuun? Ajattele mitä tapahtuisi jos saalis syödään ja peli pysäytetään ennen kuin se taas tulee näkyviin. Mitä tapahtuisi sitten kun peli käynnistetään uudelleen?
+Miksi meidän pitää lisätä 'näytä'-lohko saaliin skriptin alkuun? Ajattele mitä tapahtuisi jos saalis syödään ja peli pysäytetään ennen kuin se taas tulee näkyviin. Mitä tapahtuisi sitten kun peli käynnistettäisiin uudelleen?
 
 __Hienoa, olet tehnyt peruspelin. On kuitenkin vielä muutoksia, mitä voit pelillesi tehdä. Oletko valmis haasteeseen?__
 
 
 ##Haaste 1: Pistä saaliit liikkumaan eri tavalla
 
-At the moment, all the prey liiku in the same way. __Can you make one of them
-liiku differently?__
-__Hint:__ Don’t spend too long on this bit without looking at the other activities in this
-project.
+__Tällä hetkellä kaikki saaliit liikkuvat samalla tavalla. Saatko yhden niistä liikkumaan eri tavalla?__
+__Vinkki:__ Älä mieti tätä liikaa katsomatta projektin muita tehtäviä.
 
-__Pick one of the prey to experiment on.__ If they have the same costumes, make it a different colour with the __set color effect block__. That way, you can tell it apart from the rest of the prey.
+__Valitse yksi saaliskaloista, jolla kokeilla.__ Jos sillä on sama asuste kuin muilla, tee se eri väriseksi __'aseta tehoste väri kohteeseen' -lohkolla__. Sillä tavalla erotat sen muista saaliista.
 
-Make this prey liiku slower than the others. __Hint:__ Look at the liiku (2) askelta block.
+Laita tämä saaliskala liikkumaan hitaammin kuin muut. __Vinkki:__ Tarkista 'liiku (2) askelta' -lohkoa.
 
 
 ###Testaa projektisi
-Does the prey liiku slower? Does this make the game better?
-If you can do that, __try to making one of fish liiku quicker than the others.__
+Liikkuuko saaliskala hitaammin?  Tekeekö se pelistä paremman?
+Jos kykenet tähän, __yritä pistää yhden kaloista liikkumaan muita nopeammin.__
 
 
-Does the prey still liiku in a sensible way? Do these changes make the game better?
-__Hint:__ If your prey swims around in circles, check the values of the pick random block in the turn block.
+Liikkuuko saalis silti järkevällä tavalla?  Tekevätkö nämä muutokset pelistä paremman?
+__Vinkki:__ Jos saalisi ui ympyrää, tarkista arvoja 'valitse satunnaisluku'-lohkossa ennen hahmojen 'käänny'-lohkoja.
 
-How about you make each of the prey behave differently, using different combinations of these changes?
+Mitä jos laittaisit jokaisen saaliskalan käyttäytymään eri tavalla, käyttäen eri kombinaatioita näistä muutoksista?
 
-Do any of these changes make the game better? Do they make the game more interesting, more fun, harder, or easier? Are any of those “better”?
+Tekevätkö mikään näistä muutoksista pelistä paremman? Tekevätkö ne pelistä mielenkiintoisemman, hauskemman, vaikeamman tai helpomman? Ovatko mitkään näistä "parempia"?
 
 Tallenna projektisi
 
-##Haaste 2: Make the prey avoid the Nälkäinen Kala
+##Haaste 2: Pistä saalis väistämään Nälkäistä Kalaa
 
-The prey in this game are really stupid! They just swim around randomly until they’re eaten. Real fish swim away from predators. __Let’s make one of the prey swim away from the Nälkäinen Kala.__
+Pelin saaliskalat ovat todella tyhmiä! Ne vaan uiskentelee satunnaisesti ympäri kunnes ne syödään. Oikeat kalat uivat pakoon saalistajia. __Laitetaan yhden saaliskaloista uivan pakoon Nälkäistä Kalaa.__
 
-There’s no block in Scratch that tells you the direction that another sprite is in. But you can make one sprite point towards another, then make it turn around to face away. The blocks you need are in the __Motion__ palette.
+Scratchissä ei ole lohkoa, jolla tutkia missä suunnassa toinen hahmo on. Mutta voi käskeä hahmon osoittamaan toisen hahmon suuntaan ja käännä se sitten toiseen suuntaan. Tarvitsemasi lohkot löytyvät __Liike__ paletista.
 
-Using that idea, __make one of the prey always point away from the Nälkäinen Kala.__ You might want to make it wiggle as it swims away.
+Käyttäen tätä ideaa, __tee niin, että yksi saaliskaloista on aina selin Nälkäiseen Kalaan.__ Voit kenties haluta laittaa se wigglaamaan kun se ui pois.
 
 ###Testaa projektisi
-Does this make the fish harder to catch? Does it make the game better?
+Tekee tämä kalasta Does this make the fish harder to catch? Does it make the game better?
 
 Tallenna projektisi
 
