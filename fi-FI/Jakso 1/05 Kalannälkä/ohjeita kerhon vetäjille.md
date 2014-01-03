@@ -2,7 +2,7 @@
 ##(Kalannälkä)
 
 ###Johdanto
-We’re going to make a Fish Chomp game! Guide the large Hungry Fish around and try to eat all the prey that are swimming around.
+Tehdään Kalannälkä-peli! Ohjaa isoa Nälkäistä Kalaa ja yritä syödä kaikki ympärillä liikkuvaa saalista.
 
 ###Taidot
 Tässä projektissä käsitellään:
@@ -15,7 +15,7 @@ Tässä projektissä käsitellään:
 • Pelitilanteen laskemista ja muuttamista
 
 ###Resurssit
-Tämä projekti käyttää Scratchin kirjastoista löytyviä kuvia JA nälkäisen kalan asusteet ja äänitiedosto löytyy vetäjän paketista.
+Tämä projekti käyttää Scratchin kirjastoista löytyviä kuvia sekä nälkäisen kalan asusteet ja äänitiedosto, jotka löytyvät vetäjän paketista.
 
 ###Vaaditut Scratch-kortit
 * Animate it
@@ -24,15 +24,16 @@ Tämä projekti käyttää Scratchin kirjastoista löytyviä kuvia JA nälkäise
 * Follow the mouse
 
 ###Perustehtävät
-Step 1: Hungry Fish follows the mouse pointer 
+Vaihe 1: Luo Nälkäinen Kala -hahmo joka seuraa hiiriosoitinta 
 
-Step 2: Add some prey
+Vaihe 2: Lisää saalista
 
-Step 3: Hungry fish eats the prey
-￼
+Vaihe 3: Nälkäinen Kala syö saaliin
+
 ###Haasteet
-1. Make the prey move differently
-2. Make the prey avoid the hungry fish 3. Add a score
-4. Add a countdown
-5. Add a bonus score
-6. Change the game: keep a prey alive!
+1. Pistä saaliskalat liikkumaan eri tavalla
+2. Pistä saalis väistämään Nälkäistä Kalaa
+3. Lisää pisteytys
+4. Lisää ajastin
+5. Lisää bonuspisteytys
+6. Muuta peli: pidä saaliskalat hengissä!

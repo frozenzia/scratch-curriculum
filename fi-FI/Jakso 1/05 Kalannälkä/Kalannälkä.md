@@ -5,13 +5,13 @@ Taso 2
 __Johdanto:__
 Tehdään Kalannälkä-peli! Ohjaa isoa Nälkäistä Kalaa ja yritä syödä kaikki ympärillä liikkuvaa saalista.
 
-##VAIHE 1: Luo hahmo joka vaihtaa asusteita
+##VAIHE 1: Luo Nälkäinen Kala -hahmo joka seuraa hiiriosoitinta
 __Pistetään Nälkäinen Kala uimaan meressä!__
 
 1. Aloita uusi projekti.
-2. Valitse esiintymislava, valitse lavan 'Tausta'-välilehti. Tuo kirjastosta Luonto/underwater3 ja poista backdrop1.
+2. Valitse esiintymislava, valitse lavan 'Taustat'-välilehti. Tuo kirjastosta Luonto/underwater3 ja poista backdrop1.
 3. Muuta Sprite1:n nimi Nälkäiseksi Kalaksi.
-4. Tuo Nälkäisen Kalan asuste, Resurssit/NälkäinenKala.png ja poista olemassa olevat asusteet costume1 ja costume2. 
+4. Tuo Nälkäisen Kalan asuste tiedostosta Resurssit/NälkäinenKala.png ja poista olemassa olevat asusteet costume1 ja costume2. 
 5. Varmista, että hahmo suuntaa vain vasemmalle ja oikealle napsauttamalla hahmon tiedoissa: (kuva jossa vasen/oikea-nuolet)
 6. Nyt luo skripti jolla Nälkäinen Kala seuraa hiiriosoitinta meressä näin:
 
@@ -89,7 +89,7 @@ __Nyt haluamme Nälkäisen Kalan syövän saaliin!__ Kun Nälkäinen Kala on saa
 * Nälkäisen Kalan pitäisi sulkea suunsa ja pitää "ahminta" ääntä.
 * Saaliin pitää häipyä näkyvistä, sitten ilmestyä uudelleen hetken päästä.
 
-1. Ensin, laitetaan saalis häipymään jos se koskettaa Nälkäistä Kalaa, ja ilmestymään 3 sekuntia myöhemmin. Käytä 'koskettaako'-lohkoa tarkistaaksesi, koskettaako se kalaa.
+1. Ensin, laitetaan saalis häipymään jos se koskettaa Nälkäistä Kalaa, ja ilmestymään 3 sekuntia myöhemmin. Käytä 'koskettaako'-lohkoa tarkistaaksesi, koskettaako saalis Nälkäistä Kalaa.
 
 ```scratch
 	kun klikataan LIPPU
@@ -110,11 +110,11 @@ __Nyt haluamme Nälkäisen Kalan syövän saaliin!__ Kun Nälkäinen Kala on saa
 ```
 
 ###Testaa projektisi
-__Kokeile peliäsi uudelleen -- huomaatko ongelmia?__ Huomaa, että saalis häipyy näkyvistä vaikka koskettaa Nälkäistä Kalaa missä tahansa kohtaa. Kala voisi myös vain odottaa 3 sekuntia ja syödä saaliin sillä sekunnilla kun se ilmestyy uudelleen -- eipä ole kovin reilu!
+__Kokeile peliäsi uudelleen -- huomaatko ongelmia?__ Huomaa, että saalis häipyy näkyvistä vaikka koskettaa Nälkäistä Kalaa missä tahansa kohtaa. Kala voisi myös vain odottaa 3 sekuntia ja syödä saaliin sillä sekunnilla kun se ilmestyy uudelleen, koska saalis ilmestyy aina samaan paikkaan, mistä on häipynytkin -- eipä ole kovin reilua!
 
 2. Miten voisimme varmistaa, että saalis häipyy vain jos se koskettaa Nälkäisen Kalan suuta? Voisimme käyttää 'koskettaako väriä' -lohkoa ja tarkistaa, koskettaako se kalan sinisiä hampaita. Tee tämä korvaamalla skriptisi 'koskettaako'-lohko 'koskettaako väriä' -lohkolla, napsauta lohkon väri-ruutua ja napsauta vielä kalan hampaita.
 
-3. Seuraavaksi pistetään saalis liikkumaan ruudulla satunnaiseen pisteeseen ennen uudelleenilmestymistä käyttämällä 'mene kohtan' -lohko, ja antamalla sille satunnaiset arvot x:ksi ja y:ksi.
+3. Seuraavaksi pistetään saalis liikkumaan ruudulla satunnaiseen pisteeseen ennen uudelleenilmestymistä käyttämällä 'mene kohtaan' -lohko, ja antamalla sille satunnaiset arvot x:ksi ja y:ksi.
 
 ```scratch
 	kun klikataan LIPPU
@@ -161,7 +161,7 @@ Koeaja peli uudelleen -- häipyykö saalis vain kun koskettaa kalan suuta? Ja il
 ```
 __Nyt haluamme kalan vastaanottavan tämän viestin ja reagoivan siihen pitämällä "ahminta" ääntä ja napsauttamalla leuat kiinni.__
 
-5. Lisää Resurssit/SuuKiinni -asuste ja Resurssit/Ahminta Nälkäisen Kalan hahmolle.
+5. Lisää Nälkäisen Kalan hahmolle tiedostoista Resurssit/SuuKiinni -asuste ja Resurssit/Ahminta -ääni.
 6. Sitten, lisää Nälkäiselle Kalalle uusi skripti, joka vastaanottaa saaliin lähettämän viestin. Skriptillä pistetään kala toistamaan 'ahminta'-äänen, vaihtamaan SuuKiinni-asusteeksi, odottamaan hetken ja sitten vaihtamaan alkuperäiseen.
 
 ```scratch
@@ -178,7 +178,7 @@ __Nyt Nälkäinen Kalamme on valmis syömään, täytetään meri saaliilla. Oik
 
 ###Testaa projektisi
 Napsauta vihreätä lippua.
-Syökö Nälkäinen Kala saaliit? Syökö se yksittäisiä saaliita?
+Syökö Nälkäinen Kala saaliskalat? Syökö se yksittäisiä saaliskaloja?
 
 Tallenna projektisi
 
@@ -188,9 +188,9 @@ Miksi meidän pitää lisätä 'näytä'-lohko saaliin skriptin alkuun? Ajattele
 __Hienoa, olet tehnyt peruspelin. On kuitenkin vielä muutoksia, mitä voit pelillesi tehdä. Oletko valmis haasteeseen?__
 
 
-##Haaste 1: Pistä saaliit liikkumaan eri tavalla
+##Haaste 1: Pistä saaliskalat liikkumaan eri tavalla
 
-__Tällä hetkellä kaikki saaliit liikkuvat samalla tavalla. Saatko yhden niistä liikkumaan eri tavalla?__
+__Tällä hetkellä kaikki saaliskalat liikkuvat samalla tavalla. Saatko yhden niistä liikkumaan eri tavalla?__
 __Vinkki:__ Älä mieti tätä liikaa katsomatta projektin muita tehtäviä.
 
 __Valitse yksi saaliskaloista, jolla kokeilla.__ Jos sillä on sama asuste kuin muilla, tee se eri väriseksi __'aseta tehoste väri kohteeseen' -lohkolla__. Sillä tavalla erotat sen muista saaliista.
@@ -200,7 +200,7 @@ Laita tämä saaliskala liikkumaan hitaammin kuin muut. __Vinkki:__ Tarkista 'li
 
 ###Testaa projektisi
 Liikkuuko saaliskala hitaammin?  Tekeekö se pelistä paremman?
-Jos kykenet tähän, __yritä pistää yhden kaloista liikkumaan muita nopeammin.__
+Jos osasit tämän, __yritä pistää yhden kaloista liikkumaan muita nopeammin.__
 
 
 Liikkuuko saalis silti järkevällä tavalla?  Tekevätkö nämä muutokset pelistä paremman?
@@ -216,58 +216,55 @@ Tallenna projektisi
 
 Pelin saaliskalat ovat todella tyhmiä! Ne vaan uiskentelee satunnaisesti ympäri kunnes ne syödään. Oikeat kalat uivat pakoon saalistajia. __Laitetaan yhden saaliskaloista uivan pakoon Nälkäistä Kalaa.__
 
-Scratchissä ei ole lohkoa, jolla tutkia missä suunnassa toinen hahmo on. Mutta voi käskeä hahmon osoittamaan toisen hahmon suuntaan ja käännä se sitten toiseen suuntaan. Tarvitsemasi lohkot löytyvät __Liike__ paletista.
+Scratchissä ei ole lohkoa, jolla tutkia missä suunnassa toinen hahmo on. Mutta voi käskeä hahmon osoittamaan toisen hahmon suuntaan ja kääntää sen sitten vastakkaiseen suuntaan. Tarvitsemasi lohkot löytyvät __Liike__ paletista.
 
 Käyttäen tätä ideaa, __tee niin, että yksi saaliskaloista on aina selin Nälkäiseen Kalaan.__ Voit kenties haluta laittaa se wigglaamaan kun se ui pois.
 
 ###Testaa projektisi
-Tekee tämä kalasta Does this make the fish harder to catch? Does it make the game better?
+Onko kala nyt vaikeammin kiinniotettavissa?  Onko peli nyt parempi?
 
 Tallenna projektisi
 
-##Haaste 3: Add a score
-It’s not enough just to eat fish. How do you know you’re better at the game than your
-friends? __You need a way to keep score so lets add a score board.__ Look at the __Keep Score scratch card__ for an idea of how to do it. 
+##Haaste 3: Lisää pisteytys
+Ei riitä, että syödään kalat. Mistä voi tietää, että on parempi pelissä kuin kavereita? __Tarvitaan tapa pitää kirjaa pisteistä, eli lisätään pistetaulu.__ Katso __"Keep Score" Scratch-kortista__ miten tämän voisi tehdä. 
 
-Where should you put the block that changes the score?
+Mihin kohtaan pitäisi pelitilannetta muuttava lohko sijoittaa?
 
-Make sure the score goes back to zero at the start of the game. Where should you put that block?
+Varmista, että tilanne nollaantuu pelin alussa.  Mihin tämä lohko kuuluu?
 
 ###Testaa projektisi
-Does the score go to zero at the start of the game? Does it go up every time you eat prey?
+Nollaantuuko tilanne pelin alussa? Kasvaako se joka kerta saaliin syödessä?
 
 Tallenna projektisi
 
-##Haaste 4: Add a countdown
+##Haaste 4: Lisää ajastin
 
-__Give yourself a time limit in the game.__ How many fish can you eat in thirty
-seconds?
+__Anna itsellesi aikarajoituksen pelissä.__ Kuinka monta kalaa pystyt ahmimaan 30 sekunnissa?
 
-Look at the __Timer scratch card__ for how to add a timer to the game. Start with the game lasting thirty seconds.
+Katso __"Timer" Scratch-kortista__ miten peliin voi lisätä ajastimen. Aloita siitä, että peli kestää kolmekymmentä sekuntia.
 
 ###Testaa projektisi
-Does the timer start at 30?
+Alkaako ajastin 30:sta?
 
-Does it go down at the right speed?
+Laskeeko se oikealla nopeudella?
 
-Can you catch prey while the timer is going?
+Pystyykö saamaan saaliin kiinni ajastimen käydessä?
 
-Does the game stop when the timer reaches zero?
-
-Tallenna projektisi
-
-##Haaste 5: Add a bonus score
-Award a large bonus score if you can eat all three fish at the same time. How can
-you tell how many fish have been eaten?
-__Hint:__ One way to do this __uses a variable to count how many prey are swimming around.__
+Loppuuko peli kun ajastin pääsee nollaan?
 
 Tallenna projektisi
 
-##Haaste 6: Change the game: keep a prey alive! Sometimes, you can have great new ideas by taking an existing idea and doing the opposite.
-
-__Modify the game so that, instead of you controlling a fish that tries to eat the others, you control one prey in a sea with lots of Nälkäinen Kala.__ How long can you last before you’re eaten?
+##Haaste 5: Lisää bonuspisteytys
+Palkitse isolla bonuspistemäärällä jos pystyy syömään kolme saaliskalaa samanaikaisesti. Mistä voi tietää, kuinka monta kalaa on syönyt?
+__Vinkki:__ Eräs tapa on tehdä näin __käytä muuttujaa laskeaksesi kuinka monta saaliskaa uiskentelee vedessä.__
 
 Tallenna projektisi
 
-__Well done you’ve finished, now you can enjoy the game!__
-Don’t forget you can share your game with all your friends and family by clicking on __Share__ on the menu bar!T
+##Haaste 6: Muuta peli: pidä saaliskalat hengissä! Joskus voi saada loistavia, uusia ideoita ottamalla olemassa olevan idean ja kääntämällä sen päälaelleen.
+
+__Muuta peli niin, että saalistajakalan sijaan ohjaatkin saaliskalan.  Saaliskala uiskentelee meressä, joka on täynnä Nälkäisiä Kaloja.__ Miten pitkään kestät tulematta syödyksi?
+
+Tallenna projektisi
+
+__Hienoa, olet tehnyt harjoituksen, nyt voit nauttia pelistä!__
+Muista, että voit jakaa pelisi kavereitesi ja perheesi kanssa valitsemalla  __Jaa__ valikkopalkista!
